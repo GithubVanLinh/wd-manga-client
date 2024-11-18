@@ -7,7 +7,7 @@ export default function Home() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    const timeoutIds: any = [];
+    const timeoutIds: NodeJS.Timeout[] = [];
 
     const showText = "I Love You so much...";
     for (let i = 0; i < showText.length; i++) {
@@ -20,7 +20,7 @@ export default function Home() {
     }
 
     return () => {
-      timeoutIds.forEach((id) => clearTimeout(id));
+      timeoutIds.forEach((id: NodeJS.Timeout) => clearTimeout(id));
     };
   }, []);
 

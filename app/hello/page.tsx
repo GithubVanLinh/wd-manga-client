@@ -1,5 +1,5 @@
-export interface HelloPageProps {}
+// export interface HelloPageProps {}
 
-export default function HelloPage({}: Readonly<HelloPageProps>) {
+export default function HelloPage() {
   return <div>Hello From ME</div>;
 }
